@@ -1,14 +1,22 @@
+import bot.Inventaire;
+import de.De;
 import de.Face;
-import de.Type;
 
 
 
+import static de.Ressource.*;
 import static de.Type.*;
 
 public class test {
     public static void main(String[] args){
         System.out.println("kyriakos");
-        Face myFace = new Face(3,4,5,6, CHOIX);
-        System.out.println("Type de Face = " + myFace.toString());
+        Face myFace = new Face(3,OR, CHOIX);
+        myFace.afficherFace();
+        De myDe = new De();
+        myDe.InitDe1();
+        myDe.afficherDe();
+        Inventaire Sac = new Inventaire();
+        Sac.setInventaireJ1();
+        Sac.afficherInventaire();
     }
 }

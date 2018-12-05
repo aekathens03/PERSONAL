@@ -1,40 +1,46 @@
 package de;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Face {
-    private final int or;
-    private final int solaire;
-    private final int lunaire;
-    private final int victoire;
-    private final Type type;
 
+    private Integer valeur;
+    private Ressource res;
+    private Type type;
 
+    // CONSTRUCTEUR D'UNE FACE //
 
-    public Face(int or, int solaire, int lunaire, int victoire , Type type){
-    this.or = or;
-    this.solaire = solaire;
-    this.lunaire = lunaire;
-    this.victoire = victoire;
-    this.type = type;
+    public Face(Integer valeur, Ressource res,Type type){
+        this.valeur = valeur;
+        this.res = res;
+        this.type = type;
     }
 
-
-    public int getNbOr(){
-        return or;
-    }
-    public int getNbLunaire(){
-        return or;
-    }
-    public int getNbSolaire(){
-        return or;
-    }
-    public int getNbVictoire(){
-        return or;
+    //  GETTER & SETTER VALEUR  //
+    public Integer getValeur() {
+        return valeur;
     }
 
-    public String toString(){
-        return " "+  or +  " "+ solaire +" "+ lunaire +" "+ victoire +" "+ type.toString();
+    private void setValeur(Integer valeur)  {
+        this.valeur = valeur;
+    }
+
+    //  GETTER & SETTER RESSOURCE //
+    private void setRes(Ressource res){
+        this.res = res;
+    }
+
+    public Ressource getRes() {
+        return res;
+    }
+
+    private void setType(Type type) { this.type = type;}
+
+    public Type getType() {return type;}
+
+
+
+    public void afficherFace(){
+
+        System.out.println(String.format(" |%-8s  %s      %-6s|", getRes(), getValeur(),getType()));
     }
 }
