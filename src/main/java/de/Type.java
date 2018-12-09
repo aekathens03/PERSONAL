@@ -21,9 +21,9 @@ public enum Type {
         }
     },
     X3{@Override
-        public String toString(){
-            return "X3";
-        }
+    public String toString(){
+        return "X3";
+    }
     },
     ADVER {
         @Override
@@ -31,7 +31,7 @@ public enum Type {
             return "ADVER";
         }
 
-        };
+    };
 
     public abstract String toString();
 }
